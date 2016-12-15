@@ -57,6 +57,7 @@ class APIRequestManager {
                 let json = try JSONSerialization.jsonObject(with: validData, options: []) as? [String:Any]
                 if let validJson = json {
                     print(validJson)
+                    
                 }
             } catch {
                 print("Error converting json: \(error)")

@@ -56,7 +56,8 @@ class ElementsTableViewController: UITableViewController {
         let select = self.elements[indexPath.row]
         cell.textLabel?.text = select.name
         cell.detailTextLabel?.text = "\(select.symbol)(\(select.number)) \(select.weight)"
-
+        cell.imageView?.image = nil
+        
         APIRequestManager.manager.getData(endPoint: "https://s3.amazonaws.com/ac3.2-elements/\(select.symbol)_200.png"){
             (data) in
             if let imageData = data{
